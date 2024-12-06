@@ -1,0 +1,58 @@
+.whale-event {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000; /* Ensure it covers everything */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999; /* Make the overlay sit above everything else */
+  }
+  
+  .message {
+    position: absolute;
+    top: 20px;
+    font-size: 24px;
+    color: white;
+    z-index: 10000; /* Ensure it appears above everything else */
+    text-align: center;
+    width: 100%;
+  }
+  
+  .whale-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  
+  .whale {
+    position: absolute;
+    width: 750px;
+    height: auto;
+    z-index: 10001; /* Ensure the whale appears above the overlay */
+    pointer-events: none; /* Allow clicks to pass through the whale */
+  }
+  
+  @keyframes whale-move-up {
+    from {
+      top: 100vh; /* Start at the bottom of the screen */
+    }
+    to {
+      top: 50vh; /* Stop in the middle of the screen */
+    }
+  }
+  

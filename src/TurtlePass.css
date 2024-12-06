@@ -1,0 +1,86 @@
+.turtle-event {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background with opacity */
+    z-index: 1000;
+  }
+  
+  .message {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 1001;
+    animation: fadeInOut 30s linear infinite; /* Fade in and out for the message */
+  }
+  
+  .turtle-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .turtle {
+    position: absolute;
+    height: auto;
+    animation: moveTurtles 30s linear forwards; /* Increased duration to 30s */
+    z-index: 1002; /* Ensure turtles appear above the overlay */
+  }
+  
+  .turtle.big {
+    width: 50vw; /* Big turtle takes 50% of the screen width */
+  }
+  
+  .turtle.medium {
+    width: 35vw; /* Medium turtle takes 35% of the screen width */
+  }
+  
+  .turtle.small {
+    width: 20vw; /* Small turtle takes 20% of the screen width */
+  }
+  
+  .turtle.smaller {
+    width: 15vw; /* Smaller turtles are even smaller */
+  }
+  
+  @keyframes moveTurtles {
+    0% {
+      transform: translateX(-100vw); /* Start off-screen to the left */
+    }
+    100% {
+      transform: translateX(calc(100vw + 50vw)); /* End off-screen to the right with turtle width accounted for */
+    }
+  }
+  
+  @keyframes fadeInOut {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  

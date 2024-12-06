@@ -1,0 +1,56 @@
+@keyframes flashyBackground {
+    0% {
+      background: red;
+    }
+    20% {
+      background: green;
+    }
+    40% {
+      background: yellow;
+    }
+    60% {
+      background: blue;
+    }
+    80% {
+      background: purple;
+    }
+    100% {
+      background: pink;
+    }
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: #fff;
+    font-family: "Comic Sans MS", "Papyrus", cursive;
+    animation: flashyBackground 1s linear infinite; /* Faster animation for abrupt changes */
+    position: relative;
+  }
+  
+  .navbar-brand {
+    font-family: "Gamja Flower", sans-serif;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .navbar-button {
+    position: absolute;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    font-family: "Wingdings", sans-serif;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .navbar-button:hover {
+    background-color: yellow;
+    color: red;
+    transform: rotate(10deg);
+  }
+  

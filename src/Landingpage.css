@@ -1,0 +1,97 @@
+.landing-page {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f8ff; /* Light ocean color */
+    position: relative;
+    overflow: hidden;
+}
+
+.content-section {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    animation: shake 2s infinite; /* Random shaking effect */
+}
+
+.ocean-image {
+    width: 200px; /* Standardized width */
+    height: 200px; /* Standardized height */
+    object-fit: cover; /* Maintain aspect ratio while filling */
+    border: 5px solid #333; /* Deep-fried style */
+    animation: flicker 0.5s alternate infinite; /* Annoying flicker effect */
+}
+
+p {
+    max-width: 600px;
+    font-size: 1.2em;
+    color: rgba(51, 51, 51, 0.1); /* Barely visible text */
+    text-align: justify;
+    animation: textFlicker 0.5s infinite, moveText 1s ease-in-out infinite; /* Flickering & moving text */
+}
+
+/* Text flickering effect */
+@keyframes textFlicker {
+    0% {
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
+
+/* Randomized text position */
+@keyframes moveText {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(5px, -5px);
+    }
+    50% {
+        transform: translate(-5px, 5px);
+    }
+    75% {
+        transform: translate(3px, 3px);
+    }
+    100% {
+        transform: translate(-3px, -3px);
+    }
+}
+
+/* Annoying flicker effect for the ocean image */
+@keyframes flicker {
+    0% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
+
+/* Shaking effect for content section */
+@keyframes shake {
+    0% {
+        transform: translateX(-5px) translateY(5px);
+    }
+    25% {
+        transform: translateX(5px) translateY(-5px);
+    }
+    50% {
+        transform: translateX(-5px) translateY(5px);
+    }
+    75% {
+        transform: translateX(5px) translateY(-5px);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
